@@ -35,6 +35,7 @@
     .choices.form-group.formio-choices:not([data-type="select-multiple"]).is-open > .choices__list.choices__list--dropdown.is-active > .choices__list{
         max-height: 100%;
         padding-bottom: 50px;
+        padding-top: 4px;
     }
     
     .choices__list.choices__list--single > .choices__item > .choices__button{
