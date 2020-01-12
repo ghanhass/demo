@@ -123,7 +123,7 @@
         display:block;
         overflow: auto;
         height: 100%;
-        background: #585858;
+        /* background: #585858; */
     }
 
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__inner >  input.choices__input{
@@ -160,43 +160,57 @@
 
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__inner > .choices__list > .choices__item {
         display: flex;
-        font-size: 24px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
         min-height: 67px;
         border-top:1px solid #e0e0e0;
         width: calc(100% - 20px);
         margin: auto;
         align-items: center;
         padding: 0;
-        background: #585858;
-        color: #FFFFFF;
-        justify-content:space-between;
+        /* background: #585858; */
+        /* color: #FFFFFF; */
         border: none;
         border-bottom: 1px solid #d4d4d4;
+        background: #FFFFFF;
+        color: #333;
+        font-size: 24px;
+        line-height: 1.45;
     }
 
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__inner > .choices__list > .choices__item span{
         pointer-events:none;
         display: inline-flex;
         align-items: center;
-        max-width: calc(100% - 72px);
+        max-width: calc(100% - 80px);
         padding-top: 2px;
         padding-bottom: 2px;
+        word-break: break-word;
     }
 
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__inner > .choices__list > .choices__item .choices__button{
         width: 50px;
         height: 50px;
         color:#333;
-        background-image: url('data:image/png;base64,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');
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QAWABYAFj2P5m7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5AEMCzYUqSTP1QAAAbxJREFUeNrt3EFSAjEQhtFAeck5IcfEPSLKMJ1097xvyUr+V5GJWl7u9/t9KE1XEwARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkRAgAjIWfsywfO2bfvx2u12c0KyYLx6HcgCjFkoQHaMHYkCZOfIUShAPhg3AuUKY0v19VxhuBi2wYi4l1xh5ME4JUhmjNOBZMc4FUgFjNOAVME4BUgljDEm/fj9cZRZb7AaxpQT8myUGReyihjhIK9GiUSpihEK8p9RIlAqY4SBvDPKkSjVMUJA9oxyxJAdMFI99n4yaBeMdPeQVacrC0bKi+Hsz59MGCEgR7zBWU9o2TDCTkg0SleM0G9ZUSidMcI/Q45G6Y4xxhiXGf+3N8sfE2THmPaUlWGIChhTH3tXDlIFY/o9ZMUwlTCWXAxnDlQNY9lNfcZQFTGWgUQPVhVjKUjUcJUxloMcPWB1jBQgRw3ZASMNyKeDdsFIBbJ32E4Y6UDeHbgbRkqQ/w7dESMtyF+Dd8VIDfLb8J0x0oM8AnTHGGPSL6jU6IQAERABASIgQAQEiIAAERABASIgQAQEiIAAERABASIgQASkUd/fwbZxQD7a3gAAAABJRU5ErkJggg==');
         background-size: 45px;
-        display: block;
-        position: relative;
+        display: flex;
+        /* position: relative; */
         padding: 0;
         margin: 0;
         font-size:0;
-        border: 1px solid #d4d4d4;
-        border-radius: 50%;
+        border: 1px solid #818181;
+        /* border-radius: 50%; */
         cursor: pointer;
+        margin-right: 20px;
+    }
+    .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__inner > .choices__list > .choices__item .choices__button::before{
+        content:'aaa';
+        display: block;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        color: #000000;
     }
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__inner > .choices__list > .choices__item .choices__button *{
         display:none;
@@ -207,23 +221,41 @@
         background: #FFFFFF;
         display: flex;
         font-size: 24px;
-        min-height: 59.8px;
+        min-height: 67px;
         border-top: 1px solid #e0e0e0;
         width: calc(100% - 20px);
         margin: auto;
         align-items: center;
         padding: 0;
-        justify-content: space-between;
+        justify-content: flex-start;
         border: none;
         border-bottom: 1px solid #d4d4d4;
     }
+
+    .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__list.choices__list--dropdown > .choices__list > .choices__item.choices__item--selectable::before{
+        content:' ';
+        width: 50px;
+        height: 50px;
+        color: #333;
+        background-size: 45px;
+        display: block;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        border: 1px solid #818181;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__list.choices__list--dropdown > .choices__list > .choices__item.choices__item--selectable > span{
         pointer-events: none;
         display: inline-flex;
         align-items: center;
-        max-width: 100%;
+        max-width: calc(100% - 80px);
         padding-top: 2px;
         padding-bottom: 2px;
+        word-break: break-word;
+        line-height: 1.45;
     }
 
     .choices.form-group.formio-choices[data-type="select-multiple"] > .choices__list.choices__list--dropdown:not(.you-can-click) > .choices__list > .choices__item,
