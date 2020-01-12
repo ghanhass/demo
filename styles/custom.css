@@ -1,4 +1,4 @@
-@media screen and (max-width:767px){
+/*@media screen and (max-width:767px){*/
 
     /*START select-single && select-multiple*/
     html.form-dropdown-shown::before{
@@ -275,4 +275,4 @@
         pointer-events:none
     }
     /*END select-multiple*/
-}
+/*}*/
