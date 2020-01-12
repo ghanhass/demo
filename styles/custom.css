@@ -11,13 +11,13 @@
         color: #d9d9d9;
         top: 3px;
         right: 3px;
-        font-size: 23px;
+        font-size: 32px;
         box-shadow: 0 0 0px 1px rgba(239, 239, 239, 0.53);
-        width: 32px;
-        height: 32px;
+        width: 45px;
+        height: 45px;
         background: rgba(0,0,0,0.6);
         border-radius:100%;
-        font-weight: bold;
+        /* font-weight: bold; */
     }
     /*END select-single && select-multiple*/
     /*START select-single*/
@@ -230,6 +230,7 @@
         justify-content: flex-start;
         border: none;
         border-bottom: 1px solid #d4d4d4;
+        pointer-events: none;
     }
 
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__list.choices__list--dropdown > .choices__list > .choices__item.choices__item--selectable::before{
@@ -245,6 +246,7 @@
         border: 1px solid #818181;
         cursor: pointer;
         margin-right: 20px;
+        pointer-events: auto;
     }
 
     .choices.form-group.formio-choices[data-type="select-multiple"].is-open > .choices__list.choices__list--dropdown > .choices__list > .choices__item.choices__item--selectable > span{
