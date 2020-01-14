@@ -3,7 +3,7 @@
     display:none;
 }
 
-@media screen and (max-width: 1024px){
+
 
     /*START select-single*/
     .choices.form-group.formio-choices:not([data-type="select-multiple"]).is-open > .choices__list.choices__list--dropdown.is-active{
@@ -254,4 +254,3 @@
     }
     /*END select-single && select-multiple*/
     
-}
