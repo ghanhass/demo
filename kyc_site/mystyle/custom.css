@@ -32,3 +32,8 @@
     align-items: flex-end;
 }
 
+
+.landing-body .landing-wrapper #footer{
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
