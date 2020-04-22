@@ -2523,7 +2523,8 @@ a {
   }
   .landing-body .landing-wrapper #header .header-content {
     padding-left: 20px;
-    background: url("../images/landing/asset-mackup.png") no-repeat;
+    /*background: url("../images/landing/asset-mackup.png") no-repeat;*/
+    background: url("../../images/HEADER3.png") no-repeat;
     background-position: right 50%;
   }
   .landing-body .landing-wrapper  .features {

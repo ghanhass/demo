@@ -10,3 +10,18 @@
 .pt-174{
     padding-top:174px !important;
 }
+
+.landing-body .landing-wrapper #header .header-content {
+    background:none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+}
+.landing-body .landing-wrapper #header .header-content div.img-parent img{
+    max-width: 400px;
+}
+
+.landing-body .landing-wrapper #header .header-content div.img-parent{
+    display: flex;
+    align-items: flex-end;
+}
