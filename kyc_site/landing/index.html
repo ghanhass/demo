@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script>document.write('<base href="' + document.location + '" />');</script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>DigiGO by Vneuron</title>
+
+        <link id="theme-css" rel="stylesheet" type="text/css" href="theme/blue/theme-accent.css">
+        <link id="layout-css" rel="stylesheet" type="text/css" href="layout/css/layout-blue.css">
+        <link rel="stylesheet" type="text/css" href="primeng.min.css">
+        <link rel="stylesheet" type="text/css" href="primeflex.css">
+    </head>
+
+    <body class="landing-body">
+        <div class="landing-wrapper">
+            <div id="header">
+                <div class="header-top">
+                    <img src="../layout/images/logo-black.png" class="logo" alt="babylon-layout"/>
+                    <a id="landing-menu-button" href="#">
+                        <img src="layout/images/landing/icon-ellipsis-v.svg" alt="Menu"/>
+                    </a>
+                    <ul id="landing-menu">
+                        <li>
+                            <a href="#header">Home</a>
+                        </li>
+                        <li>
+                            <a href="#features">Atouts</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header-content">
+                    <h1>DigiGO by Vneuron.</h1>
+                    <p>DigiGO est votre nouveau identifiant électronique à travers le mobile.</p>
+                    <a href='../../index.html' type="button" class="ui-button landing-button ui-widget ui-state-default ui-corner-all ui-button-text-only" >
+                        <span class="ui-button-text ui-c">Inscription en ligne</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="features">
+                <h1>DigiGO dispose d’un ensemble d’atouts</h1>
+                <p></p>
+                <div class="p-grid">
+                    <div class="p-col-12 p-md-12 p-lg-4">
+                        <div class="feature-box">
+                            <img src="layout/images/landing/icon-responsivelayout.svg" alt="babylon-layout" />
+                            <h3>Mobilité et portabilité</h3>
+                            <p>Le porteur de certificat n’a plus besoin de garder en possession son certificat électronique sur carte à puce ou token cryptographique. Le certificat du porteur est désormais protégé dans un module cryptographique.</p>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-12 p-lg-4">
+                        <div class="feature-box">
+                            <img src="layout/images/landing/icon-moderndesign.svg" alt="babylon-layout" />
+                            <h3>Simplification de l’enregistrement</h3>
+                            <p>Dans le but d'élargir son réseau de bureaux d'enregistrement, TunTrust opérera dans un cadre contractuel avec des autorités d'enregistrement déléguées qui seront le point de contact avec les demandeurs de certificats.</p>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-12 p-lg-4">
+                        <div class="feature-box">
+                            <img src="layout/images/landing/icon-welldocumented.svg" alt="babylon-layout" />
+                            <h3>Facilité d’Intégration</h3>
+                            <p>Les fournisseurs de services (e-gov, e-health, e-banking) peuvent facilement intégrer le service DigiGO dans leur application afin d’offrir à leurs clients un moyen de signer des formulaires et des documents électroniques.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="multimedia">
+                <h1>Vneuron DXP</h1>
+                <div class="video-container">
+
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FVneuron%2Fvideos%2F2066089770306336%2F&show_text=0&width=560" width="560" height="489" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="p-grid">
+                    <div class="p-col-12 p-lg-4">
+                        <img src="layout/images/logo-white.png" alt="babylon-layout" class="footer-logo"/>
+                    </div>
+
+                    <div class="p-col-12 p-lg-8 footer-menu">
+                        <div class="p-grid">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            BabylonLanding = {
+                addClass: function(element, className) {
+                    if (element.classList)
+                        element.classList.add(className);
+                    else
+                        element.className += ' ' + className;
+
+                    var mask = document.createElement("div");
+                    mask.className = 'layout-mask';
+                    element.appendChild(mask);
+
+                    mask.addEventListener('click', function(e) {
+                        BabylonLanding.hideMenu();
+                        e.preventDefault();
+                    });
+                },
+
+                removeClass: function(element, className) {
+                    if (element.classList)
+                        element.classList.remove(className);
+                    else
+                        element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+
+                    var mask = document.getElementsByClassName('layout-mask')[0];
+                    if(mask)
+                        element.removeChild(mask);
+                },
+
+                hasClass: function(element, className) {
+                    if (element.classList)
+                        return element.classList.contains(className);
+                    else
+                        return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
+                },
+
+                hideMenu: function() {
+                    this.removeClass(document.getElementsByClassName('landing-body')[0], 'landing-menu-active');
+                },
+
+                showMenu: function() {
+                    this.addClass(document.getElementsByClassName('landing-body')[0], 'landing-menu-active');
+                }
+            };
+
+            document.getElementById('landing-menu-button').addEventListener('click', function(e) {
+                var menu = document.getElementsByClassName('landing-body')[0];
+
+                if(BabylonLanding.hasClass(menu, 'landing-menu-active'))
+                    BabylonLanding.hideMenu();
+                else
+                    BabylonLanding.showMenu();
+
+                e.preventDefault();
+            });
+
+            var menuLinks = document.querySelectorAll('#landing-menu a');
+            for (i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', function(e) {
+                    BabylonLanding.hideMenu();
+                });
+            }
+        </script>
+	<!-- start webpushr code --> <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BBZ10cJ4V9XQoZu4b9ah0gAxWwy3vkytK17t4OMd7ao2TujTaB-FgxpH5ZpJddwJi-mEYrrtnyR4DF_sdNt9Ec4');</script><!-- end webpushr code -->
+    </body>
+
+</html>
