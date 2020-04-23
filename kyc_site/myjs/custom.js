@@ -13,7 +13,7 @@ function postionHeader(headerElement, afterHeaderElement, data){
 }
 window.addEventListener("load", function(loadEvent){
     var headerElement = document.querySelector(".header-top");
-    var afterHeaderElement = document.querySelector(".header-content") || headerElement.nextElementSibling;
+    var afterHeaderElement = document.querySelector(".header-content") || document.querySelector(".main");
     var specificPaddingTop = parseInt(window.getComputedStyle(afterHeaderElement).paddingTop);
     postionHeader(headerElement, afterHeaderElement,{'specificPaddingTop': specificPaddingTop});
     window.addEventListener("scroll", function(event){
