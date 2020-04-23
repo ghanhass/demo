@@ -98,3 +98,12 @@
     color: #ffffff;
     border-color: #512DA8;
 }
+
+.landing-body .landing-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    flex-grow:1;
+}
