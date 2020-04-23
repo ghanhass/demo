@@ -1,16 +1,15 @@
+.header-top{
+    background-color: #fdfdfd;
+    z-index: 99999;
+    box-shadow: 0 0 5px;
+    margin-bottom:5px;
+}
 .fixed-header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background-color: #fdfdfd;
     z-index:99999;
-    box-shadow: 0 0 5px;
-}
-.header-top{
-    background-color: #fdfdfd;
-    z-index: 99999;
-    box-shadow: 0 0 5px;
 }
 .pt-174{
     padding-top:174px !important;
@@ -46,6 +45,7 @@
 
 .main{
     padding: 40px;
+    border:none;
 }
 
 @media screen and (min-width: 1201px){
@@ -84,5 +84,8 @@
 }
 
 .card{
-    padding:0;
+    /*padding:0;*/
+}
+.no-border{
+    border:none !important;
 }
