@@ -19,10 +19,11 @@
 .landing-body .landing-wrapper #header .header-content {
     background:none;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding-left:80px;
     padding-top:80px;
     padding-bottom: 0px;
+    padding-right: 80px;
 }
 
 .landing-body .landing-wrapper #header .header-content > :first-child{
