@@ -19,10 +19,11 @@
     background:none;
     display: flex;
     align-items: flex-end;
-    padding-left:80px;
+    /*padding-left:80px;
     padding-top:80px;
-    padding-bottom: 0px;
+    padding-bottom: 0px;*/
     /* padding-right: 80px; */
+    padding: 120px 0 120px 140px;
 }
 
 .landing-body .landing-wrapper #header .header-content > :first-child{
@@ -175,3 +176,92 @@
     }
 }
 /*END footer enhancements
+
+
+/*START homepage enhancement*/
+.landing-body .landing-wrapper #header .header-content div.img-parent img.mobile-only{
+            display:none;
+        }
+@media screen and (max-width:1000px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:70px;
+    }
+    }
+
+    @media screen and (max-width:900px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:60px;
+        padding-right: 0;
+    }
+    }
+
+    @media screen and (max-width:800px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:50px;
+        padding-right: 0;
+    }
+    }
+    
+    @media screen and (max-width:700px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:40px;
+        padding-right:40px;
+    }
+    }
+
+
+    @media screen and (max-width:600px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:30px;
+        padding-right:30px;
+    }
+    }
+    @media screen and (max-width:500px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:20px;
+        padding-right:20px;
+    }
+    }
+    @media screen and (max-width:400px){
+    .landing-body .landing-wrapper #header .header-content{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    }
+
+    @media screen and (max-width:780px){
+    .landing-body .landing-wrapper #header .header-content{
+        flex-direction:column;
+        align-items: center;
+        padding-left:40px;
+        padding-right:40px;
+    }
+     .landing-body .landing-wrapper #header .header-content > .img-parent{
+        align-self: center;
+        margin-top:30px;
+    }
+    }
+    
+
+    @media screen and (max-width: 575px){
+
+    .landing-body .landing-wrapper #header .header-content h1{
+            font-size: 42px;
+    }
+
+    .landing-body .landing-wrapper #header .header-content p{
+        font-size: 17px;
+        max-width: none;
+    }
+    }
+
+    @media screen and (max-width:780px){
+        .landing-body .landing-wrapper #header .header-content div.img-parent img.mobile-only{
+            display: inline-block;
+            max-width: 100%;
+        }
+        .landing-body .landing-wrapper #header .header-content div.img-parent img.mobile-only + img{
+            display:none;
+        }
+    }
+/*END homepage enhancement*/
