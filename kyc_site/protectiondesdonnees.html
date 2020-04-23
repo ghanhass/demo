@@ -15,6 +15,24 @@
         <link rel="stylesheet" type="text/css" href="primeflex.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="./mystyle/custom.css">
+        <style>
+            ul.square-ul > li::before{
+                content:' ';
+                width:8px;
+                height:8px;
+                display:inline-block;
+                border:1px solid #212121;
+                position:absolute;  
+                left:-15px;
+                top:4px;
+            }
+            ul.square-ul > li{
+                position:relative;
+            }
+            .square-ul{
+                list-style:none;
+            }
+        </style>
     </head>
 <body class="landing-body">
         <div class="landing-wrapper">
@@ -41,7 +59,23 @@
                         </div>
                     </div>
 
-                        <div class="main"></div>
+                        <div class="main card">
+                            <h1>
+                                Préservation de vos droits par rapport au traitement de vos données personnelles renseignées en ligne sur la plateforme DigiGO by Vneuron
+                            </h1>
+                            <p>
+                                Le processus de traitement de vos données personnelles saisies en ligne sur la plateforme DigiGO by Vneuron pour l’octroi d’un identifiant électronique, demeure un processus conforme aux exigences de la Loi organique du 27 juillet 2004, portant sur la protection des données à caractère personnel, respectant ainsi tous les droits qui vous sont accordés par le législateur, à savoir:
+                            </p>
+                            <ul class="square-ul">
+                                <li>Droit de vous informer sur les données à traiter.</li>
+                                <li>Droit de vous informer sur la finalité du traitement.</li>
+                                <li>Droit de vous informer par qui vos données seront traitées et avec qui elles seront partagées.</li>
+                                <li>Droit de vous informer de tous vos droits d’accès, de rectification et d’opposition et de la manière dont vous pouvez les exercer.</li>
+                                <li>Droit d’obtenir votre consentement explicite.</li>
+                            </ul>
+
+                            Pour tout complément d’information, veuillez contacter notre Délégué à la Protection des Données Personnelles, à l’adresse mail suivante:  <a href="mailto:dpo@Vneuron.com">dpo@Vneuron.com</a>.
+                        </div>
 
 <div id="footer">
         <div class="p-grid">
