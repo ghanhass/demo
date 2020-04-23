@@ -134,7 +134,7 @@
 
 .landing-body .landing-wrapper #footer > .p-grid > :nth-child(2){
     flex-grow:1;
-    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -175,6 +175,29 @@
         align-items: center !important;
     }
 }
+
+@media screen and (max-width:1200px){
+    .landing-body .landing-wrapper #footer{
+        padding-left:100px;
+        padding-right:100px;
+    }
+    }
+    
+    @media screen and (max-width:1110px){
+    .landing-body .landing-wrapper #footer{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    }
+    
+    @media screen and (max-width:870px){
+    .landing-body .landing-wrapper #footer{
+        padding-left:60px;
+        padding-right:60px;
+    }
+    }
+    
+    
 /*END footer enhancements
 
 
