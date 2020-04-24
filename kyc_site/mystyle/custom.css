@@ -349,7 +349,7 @@
         width:100%;
         height:100%;
         display: flex;
-        padding: 0 5%;
+        padding: 50px 5%;
         overflow: auto;
         justify-content: center;
     }
@@ -374,3 +374,9 @@
             outline:none;
     }
 /*END homepage enhancement*/
+/*START new updates*/
+.main > h1:first-of-type{
+    font-size: 33px;
+    color: #924287;
+}
+/*END new updates*/
