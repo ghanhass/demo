@@ -23,7 +23,7 @@
     padding-top:80px;
     padding-bottom: 0px;*/
     /* padding-right: 80px; */
-    padding: 120px 0 120px 140px;
+    padding: 120px 0 0px 140px;
 }
 
 .landing-body .landing-wrapper #header .header-content > :first-child{
@@ -295,7 +295,7 @@
         padding-right: 0;
     }
     .landing-body .landing-wrapper #header .header-content > :first-child{
-        padding-left:10px;
+        padding-left: 40px;
         padding-right:40px;
     }
     .landing-body .landing-wrapper #header .header-content > :nth-child(2){
@@ -305,6 +305,13 @@
      .landing-body .landing-wrapper #header .header-content > .img-parent{
         align-self: center;
         margin-top:30px;
+    }
+    }
+
+    @media screen and (max-width:525px){
+    .landing-body .landing-wrapper #header .header-content > :nth-child(2){
+        padding-left:0px;
+        padding-right:0px;
     }
     }
     
