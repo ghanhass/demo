@@ -12,7 +12,7 @@
     width:100%;
     z-index:99999;
     border-bottom:none;
-    box-shadow: 0 0 5px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
 }
 .pt-174{
     padding-top:174px !important;
