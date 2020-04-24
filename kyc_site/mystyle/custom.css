@@ -143,7 +143,7 @@
         flex-grow:1;
         display:flex;
         justify-content:center;
-        margin-bottom:10px
+        margin-bottom:10px;
     }
     
     .landing-body .landing-wrapper #footer .footer-menu  > .p-grid > *:not(:first-child):not(:last-child){
@@ -157,6 +157,8 @@
         padding-right:0;
     }
 }
+
+
 
 @media screen and (max-width:760px){
     .landing-body .landing-wrapper #footer > .p-grid > :nth-child(2) > .p-grid{
@@ -197,7 +199,38 @@
     }
     }
     
-    
+    /*START new updates*/
+    @media screen and (max-width: 760px){
+    .landing-body .landing-wrapper #footer > .p-grid > :first-child{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    .landing-body .landing-wrapper #footer > .p-grid > :nth-child(2) > .p-grid > *,
+    .landing-body .landing-wrapper #footer .footer-menu span{
+        text-align: left;
+    }
+    .landing-body .landing-wrapper #footer .footer-menu > .p-grid > * {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .landing-body .landing-wrapper #footer > :nth-child(2){
+        padding:0;
+        margin-right: -0.5em;
+        margin-left: -0.5em;
+        margin-top: -0.5em;
+        align-items: flex-end !important;
+        flex-direction: row !important;
+    }
+    }    
+    @media screen and (max-width: 340px){
+    .landing-body .landing-wrapper #footer > :nth-child(2){
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        /*align-items: flex-start !important;*/
+    }
+    }
+    /*END new updates*/
+
 /*END footer enhancements
 
 
@@ -258,6 +291,16 @@
         align-items: center;
         padding-left:40px;
         padding-right:40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .landing-body .landing-wrapper #header .header-content > :first-child{
+        padding-left:10px;
+        padding-right:40px;
+    }
+    .landing-body .landing-wrapper #header .header-content > :nth-child(2){
+        padding-left:10px;
+        padding-right:10px;
     }
      .landing-body .landing-wrapper #header .header-content > .img-parent{
         align-self: center;
