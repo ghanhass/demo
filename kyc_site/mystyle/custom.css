@@ -382,4 +382,7 @@
     font-size: 33px;
     color: #924287;
 }
+.modal-trigger{
+    cursor:pointer;
+}
 /*END new updates*/
