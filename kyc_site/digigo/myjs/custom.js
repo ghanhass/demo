@@ -21,6 +21,20 @@ window.addEventListener("load", function(loadEvent){
     });              
     //////
 
+    var triggerModalBtn = document.querySelector(".modal-trigger");
+    if(triggerModalBtn){
+        var targetModal = triggerModalBtn.dataset.modalid;
+        triggerModalBtn.addEventListener("click", function(ev){
+            document.querySelector("#"+targetModal).classList.remove("hide");
+        });
 
+        var modalCloseBtn = document.querySelector("#"+triggerModalBtn.dataset.modalid+"-close-btn");
+        if(modalCloseBtn){
+            modalCloseBtn.addEventListener("click", function(ev){
+                document.querySelector("#"+targetModal).classList.add("hide");
+            })
+        }
+    }
+    
 
 })
