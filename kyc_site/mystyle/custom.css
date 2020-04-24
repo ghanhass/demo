@@ -2,7 +2,7 @@
     background-color: #fdfdfd;
     z-index: 99999;
     margin-bottom:5px;
-    border-bottom:1px solid rgba(128, 128, 128, 0.24);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
     transition: all .2s ease-in-out;
     height:75px;
     top:-75px;
