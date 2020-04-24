@@ -1,8 +1,9 @@
 .header-top{
     background-color: #fdfdfd;
     z-index: 99999;
-    box-shadow: 0 0 5px;
     margin-bottom:5px;
+    border-bottom:1px solid rgba(128, 128, 128, 0.24)
+
 }
 .fixed-header{
     position:fixed;
@@ -10,6 +11,8 @@
     left:0;
     width:100%;
     z-index:99999;
+    border-bottom:none;
+    box-shadow: 0 0 5px;
 }
 .pt-174{
     padding-top:174px !important;
