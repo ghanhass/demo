@@ -1,0 +1,32 @@
+{
+    "data": [
+    	{
+            "id": 6,
+    		"title": "Mon entretien vidéo",
+    		"start": "2020-04-20T10:00:00",
+            "end": "2020-04-20T10:30:00",
+            "editable": true,
+            "durationEditable": false,
+            "backgroundColor": "RGB(200, 10, 10)",
+            "borderColor": "RGB(20, 230, 230)"
+        },
+    	{
+            "id": 7,
+    		"title": "Entretien vidéo",
+    		"start": "2020-04-21T10:00:00",
+            "end": "2020-04-21T10:30:00",
+            "editable": false,
+            "durationEditable": false,
+            "overlap": false
+        },
+        {
+            "id": 8,
+    		"title": "Entretien vidéo",
+    		"start": "2020-04-23T14:00:00",
+            "end": "2020-04-23T14:30:00",
+            "editable": false,
+            "durationEditable": false,
+            "overlap": false
+        }
+    ]
+}
