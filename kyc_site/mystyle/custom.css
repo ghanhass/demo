@@ -592,7 +592,9 @@
         justify-content:center;
     }
 }
-
+.underline-text{
+    text-decoration: underline;
+}
 /*.main {
     font-size: 110%;
 }*/
