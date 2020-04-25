@@ -453,7 +453,7 @@
         width: 100%;
 }
 .landing-body .landing-wrapper #footer > .p-grid > :first-child{
-    padding-left: 0px !important;
+    /*padding-left: 0px !important;*/
     /* padding-right: 0px !important; */
 }
 @media screen and (max-width:1322px){
