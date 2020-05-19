@@ -10714,5 +10714,8 @@
             "breadcrumb": "default",
             "id": "eajp4zl"
         }
-    ]
+    ],
+    "display": "wizard",
+    "numPages": 4,
+    "page": 0
 }
