@@ -27,3 +27,10 @@ color:#adadad;
     color: #2780E3;
     text-decoration: none;
 }
+
+.json-actions{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+}

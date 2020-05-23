@@ -17,6 +17,7 @@
   <script src="./scripts/jquery.slim.min.js"></script>
   <script src="./scripts/bootstrap.min.js"></script>
   <script src="./scripts/formio.full.js"></script>
+  <script src="./scripts/myscript.js"></script>
   
   <script type="text/javascript">Formio.icons = 'fontawesome';</script>
 <title>Formio playground</title>
@@ -491,12 +492,18 @@
                 <h3 class="text-center text-muted">JSON Schema</h3>
                 <div class="card card-body bg-light jsonviewer" style="padding:1px;">
                     <textarea id="json"></textarea>
+                    <div class="json-actions">
+                        <button id="apply-json-action-btn">Apply</button>
+                        <button id="copy-json-action-btn">Copy</button>
+                        <button id="reset-json-action-btn">Reset</button>
+                        <button id="save-json-action-btn">Save to storage</button>
+                    </div>
                 </div>
             </div>
         </div>
 <div class="row mt-4">
   <div class="col-sm-12">
-    <h3 class="text-center text-muted"><a class="title-span">Form Renderer</a> in your Application</h3>
+    <h3 class="text-center text-muted"><span class="title-span">Form Renderer</span> in your Application</h3>
     <div id="formio" class="card card-body bg-light"><div class="formio-form">
   <div style="position: relative;">
     <nav id="wizard-esg4ufe-header" aria-label="navigation">
@@ -533,75 +540,6 @@
   </div>
   <div class="clearfix"></div>
 </div>
-
-
-
-
-<script type="text/javascript">
-window.onload = function(){
-var form;
-var formioInfos;
-var jsonElement = document.getElementById('json');
-//console.log("xhr.responseText= ", xhr.responseText);
-var storedFormioPlaygroundObject = localStorage.getItem("formioPlaygroundObject");
-if(storedFormioPlaygroundObject){
-    formioInfos = JSON.parse(localStorage.getItem("formioPlaygroundObject"));
-    jsonElement.value = storedFormioPlaygroundObject;
-}
-else{
-    formioInfos = {
-        "display": "form",
-        "components": []
-    }
-    jsonElement.value = JSON.stringify(formioInfos, null, 3);
-}
-
-var formElement = document.getElementById('formio');
-var builderElement = document.getElementById('builder');
-var onForm = function(form) {
-  window.form = form;
-  form.on('render', function() {
-      //...
-  });
-  form.on('submit', function() {
-      //...
-  });
-};
-
-var onBuild = function(build) {
-  jsonElement.value = '';
-  formElement.innerHTML = '';
-  jsonElement.value = (JSON.stringify(builder.instance.schema, null, 3));
-  Formio.createForm(formElement, builder.instance.form).then(onForm);
-};
-
-var builder = new Formio.FormBuilder(builderElement, formioInfos, {
-    baseUrl: 'https://examples.form.io'
-});
-Formio.createForm(formElement, builder.instance.form).then(onForm);
-  
-
-var onReady = function() {
-  builder.instance.on('change', onBuild);
-};
-
-var setDisplay = function(display) {
-  builder.setDisplay(display).then(onReady);
-};
-
-// Handle the form selection.
-var formSelect = document.getElementById('form-select');
-formSelect.value = formioInfos.display;
-formSelect.addEventListener("change", function() {
-  setDisplay(this.value);
-});
-
-builder.instance.ready.then(onReady);
-
-}
-
-</script>
-
 
 </div>
 </body>
