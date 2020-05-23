@@ -2,11 +2,15 @@ var form;
 var formioInfos;
 var builder;
 window.onload = function(){    
+    var formElement = document.getElementById('formio');
+    var builderElement = document.getElementById('builder');
+
     var jsonTextArea = document.getElementById('json');
     var applyJsonActionBtn = document.getElementById("apply-json-action-btn");
     var copyJsonActionBtn = document.getElementById("copy-json-action-btn");
     var saveJsonActionBtn = document.getElementById("save-json-action-btn");
     var resetJsonActionBtn = document.getElementById("reset-json-action-btn");
+    var formSelect = document.getElementById('form-select');
 
     var onReady = function() {
         builder.instance.on('change', onBuild);
@@ -35,11 +39,13 @@ window.onload = function(){
     ////////////
     applyJsonActionBtn.addEventListener("click", function(){
         var obj = JSON.parse(jsonTextArea.value);
-        if(obj.display){
-            setDisplay(obj.display);
-        }
         form.setForm(obj);
         builder.instance.setForm(obj);
+
+        if(obj.display){
+            setDisplay(obj.display);
+            formSelect.value = obj.display;
+        }
     });
     copyJsonActionBtn.addEventListener("click", function(){
         jsonTextArea.select();
@@ -72,25 +78,20 @@ window.onload = function(){
         jsonTextArea.value = JSON.stringify(formioInfos, null, 3);
     }
     
-    var formElement = document.getElementById('formio');
-    var builderElement = document.getElementById('builder');
-    
     
     builder = new Formio.FormBuilder(builderElement, formioInfos, {
         baseUrl: 'https://examples.form.io'
     });
     Formio.createForm(formElement, builder.instance.form).then(onForm);
-      
-    
+    formSelect.value = formioInfos.display;  
     
     
     // Handle the form selection.
-    var formSelect = document.getElementById('form-select');
-    formSelect.value = formioInfos.display;
+    
     formSelect.addEventListener("change", function() {
       setDisplay(this.value);
     });
     
     builder.instance.ready.then(onReady);
     
-    }
+}
