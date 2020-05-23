@@ -1,0 +1,29 @@
+#form-select{
+    display:block;
+    margin:auto;
+    width:250px;
+}
+
+#json{
+  display:block;
+  margin:auto;
+  width:100%;
+  height: 425px;
+  overflow:auto;
+}
+
+.builder-component .formio-component-htmlelement{
+    min-height:15px;
+    margin-bottom:2px
+}
+
+.builder-component 
+.formio-component-htmlelement::before{
+content:"HTML Element";
+color:#adadad;
+}
+
+.title-span{
+    color: #2780E3;
+    text-decoration: none;
+}
