@@ -8,8 +8,36 @@ window.onload = function(){
     var saveJsonActionBtn = document.getElementById("save-json-action-btn");
     var resetJsonActionBtn = document.getElementById("reset-json-action-btn");
 
+    var onReady = function() {
+        builder.instance.on('change', onBuild);
+    };
+      
+    var setDisplay = function(display) {
+        builder.setDisplay(display).then(onReady);
+    };
+    
+    var onForm = function(form) {
+        window.form = form;
+        form.on('render', function() {
+            //...
+        });
+        form.on('submit', function() {
+            //...
+        });
+    };
+      
+    var onBuild = function(build) {
+        jsonTextArea.value = '';
+        formElement.innerHTML = '';
+        jsonTextArea.value = (JSON.stringify(builder.instance.schema, null, 3));
+        Formio.createForm(formElement, builder.instance.form).then(onForm);
+    };
+    ////////////
     applyJsonActionBtn.addEventListener("click", function(){
         var obj = JSON.parse(jsonTextArea.value);
+        if(obj.display){
+            setDisplay(obj.display);
+        }
         form.setForm(obj);
         builder.instance.setForm(obj);
     });
@@ -27,7 +55,7 @@ window.onload = function(){
         }
         jsonTextArea.value = JSON.stringify(obj, null, 3);
     });
-
+    //////////////////
     var storedFormioPlaygroundJson = localStorage.getItem("formioPlaygroundJson");
     if(storedFormioPlaygroundJson){
         formioInfos = JSON.parse(localStorage.getItem("formioPlaygroundJson"));
@@ -46,22 +74,7 @@ window.onload = function(){
     
     var formElement = document.getElementById('formio');
     var builderElement = document.getElementById('builder');
-    var onForm = function(form) {
-      window.form = form;
-      form.on('render', function() {
-          //...
-      });
-      form.on('submit', function() {
-          //...
-      });
-    };
     
-    var onBuild = function(build) {
-      jsonTextArea.value = '';
-      formElement.innerHTML = '';
-      jsonTextArea.value = (JSON.stringify(builder.instance.schema, null, 3));
-      Formio.createForm(formElement, builder.instance.form).then(onForm);
-    };
     
     builder = new Formio.FormBuilder(builderElement, formioInfos, {
         baseUrl: 'https://examples.form.io'
@@ -69,13 +82,7 @@ window.onload = function(){
     Formio.createForm(formElement, builder.instance.form).then(onForm);
       
     
-    var onReady = function() {
-      builder.instance.on('change', onBuild);
-    };
     
-    var setDisplay = function(display) {
-      builder.setDisplay(display).then(onReady);
-    };
     
     // Handle the form selection.
     var formSelect = document.getElementById('form-select');
