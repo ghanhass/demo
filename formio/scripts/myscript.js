@@ -9,6 +9,7 @@ window.onload = function(){
     var applyJsonActionBtn = document.getElementById("apply-json-action-btn");
     var copyJsonActionBtn = document.getElementById("copy-json-action-btn");
     var saveJsonActionBtn = document.getElementById("save-json-action-btn");
+    var clearJsonActionBtn = document.getElementById("clear-json-action-btn");
     var resetJsonActionBtn = document.getElementById("reset-json-action-btn");
     var formSelect = document.getElementById('form-select');
 
@@ -47,6 +48,10 @@ window.onload = function(){
     saveJsonActionBtn.addEventListener("click", function(){
         localStorage.setItem("formioPlaygroundJson", jsonTextArea.value);
     });
+    clearJsonActionBtn.addEventListener("click", function(){
+        localStorage.removeItem("formioPlaygroundJson");
+    });
+
     resetJsonActionBtn.addEventListener("click", function(){
         var obj = {
             "display": "form",
