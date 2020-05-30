@@ -12,10 +12,6 @@ window.onload = function(){
     var clearJsonActionBtn = document.getElementById("clear-json-action-btn");
     var resetJsonActionBtn = document.getElementById("reset-json-action-btn");
     var formSelect = document.getElementById('form-select');
-
-    var onReady = function() {
-        builder.instance.on('change', onBuild);
-    };
       
     var setDisplay = function(display) {
         builder.setDisplay(display).then(onReady);
@@ -37,7 +33,7 @@ window.onload = function(){
             form.setForm(builder.instance.form);
         }
         else{
-            Formio.createForm(formElement, builder.instance.form).then(onForm);
+            Formio.createForm(formElement, builder.instance.form);
         }
     };
     /**START action buttons**/
@@ -95,6 +91,6 @@ window.onload = function(){
       setDisplay(this.value);
     });
     
-    builder.instance.ready.then(onReady);
+    builder.instance.on('change', onBuild);
     
 }
