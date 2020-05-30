@@ -31,21 +31,14 @@ window.onload = function(){
     };
       
     var onBuild = function(build) {
-        jsonTextArea.value = '';
-        formElement.innerHTML = '';
         jsonTextArea.value = (JSON.stringify(builder.instance.schema, null, 3));
         Formio.createForm(formElement, builder.instance.form).then(onForm);
     };
-    ////////////
+    /**START action buttons**/
     applyJsonActionBtn.addEventListener("click", function(){
         var obj = JSON.parse(jsonTextArea.value);
         form.setForm(obj);
         builder.instance.setForm(obj);
-
-        if(obj.display){
-            setDisplay(obj.display);
-            formSelect.value = obj.display;
-        }
     });
     copyJsonActionBtn.addEventListener("click", function(){
         jsonTextArea.select();
@@ -61,7 +54,7 @@ window.onload = function(){
         }
         jsonTextArea.value = JSON.stringify(obj, null, 3);
     });
-    //////////////////
+    /**END action buttons**/
     var storedFormioPlaygroundJson = localStorage.getItem("formioPlaygroundJson");
     if(storedFormioPlaygroundJson){
         formioInfos = JSON.parse(localStorage.getItem("formioPlaygroundJson"));
