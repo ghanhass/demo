@@ -33,7 +33,12 @@ window.onload = function(){
       
     var onBuild = function(build) {
         jsonTextArea.value = (JSON.stringify(builder.instance.schema, null, 3));
-        Formio.createForm(formElement, builder.instance.form).then(onForm);
+        if(form){
+            form.setForm(builder.instance.form);
+        }
+        else{
+            Formio.createForm(formElement, builder.instance.form).then(onForm);
+        }
     };
     /**START action buttons**/
     applyJsonActionBtn.addEventListener("click", function(){
