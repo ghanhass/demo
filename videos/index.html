@@ -30,7 +30,9 @@
   window.addEventListener("load", function(){
     var stretchBtn = document.querySelector(".stretch-btn");
     var videoElement = document.querySelector("video");
-    videoElement.requestFullscreen();
+    videoElement.onload = function(){
+        videoElement.requestFullscreen();  
+    }	
     //stretchBtn.addEventListener("click", function(){
       //videoElement.requestFullscreen();
     //});
