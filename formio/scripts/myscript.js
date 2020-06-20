@@ -1,4 +1,4 @@
-var initialForm = {
+/*var initialForm = {
     "display": "wizard",
     "page": 0,
     "numPages": 4,
@@ -2704,7 +2704,7 @@ var initialForm = {
           "label": "Panel"
        }
     ]
-}
+}*/
 var form;
 var formioInfos;
 var builder;
