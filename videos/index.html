@@ -22,21 +22,7 @@
   </style>
  </head>
  <body>
-  <div class='parent'>
-  <button class="stretch-btn">Stretch</button>
-  <video controls src="./latest.mp4" width="1024" height="768"></video>
-  </div>
-  <script>
-  window.addEventListener("load", function(){
-    var stretchBtn = document.querySelector(".stretch-btn");
-    var videoElement = document.querySelector("video");
-    videoElement.onload = function(){
-        videoElement.requestFullscreen();  
-    }	
-    stretchBtn.addEventListener("click", function(){
-      videoElement.requestFullscreen();
-    });
-  });
-  </script>
+ <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;">
+	 <iframe src="https://streamable.com/e/5923yg" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
  </body>
 </html>
