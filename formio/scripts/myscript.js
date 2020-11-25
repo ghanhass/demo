@@ -3456,7 +3456,7 @@ function createSlider(){
     var formioElement = document.querySelector("#formio");
     if(formioElement){
 
-            $('#formio .custom_slider .owl-carousel').owlCarousel({
+            $('#formio .formio-component-custom_slider .owl-carousel').owlCarousel({
                 loop:true,
                 autoplayHoverPause: true,
                 autoplayTimeout: 5000,
