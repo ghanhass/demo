@@ -3455,7 +3455,8 @@ function createSlider(){
     
     var formioElement = document.querySelector("#formio");
     if(formioElement){
-
+        var customSliderElement = $('#formio .formio-component-custom_slider');
+        if(customSliderElement.length){
             $('#formio .formio-component-custom_slider .owl-carousel').owlCarousel({
                 loop:true,
                 autoplayHoverPause: true,
@@ -3466,8 +3467,12 @@ function createSlider(){
                 items:1
             });
     
-        $('.owl-nav, .owl-dots').wrapAll("<div class='owl-controls'></div>");
+            $('.owl-nav, .owl-dots').wrapAll("<div class='owl-controls'></div>");
         }
+        else{
+           console.log("slider not found !") ;
+        }
+    }
     
 }
 if(document.readyState === "complete"){
