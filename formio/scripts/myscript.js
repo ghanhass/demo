@@ -48,7 +48,7 @@ var initialForm = {
             }
          ],
          "className": "menuList",
-         "content": "<br><button class=\"btnMenu\">               \n                <div id=\"btn_container\">\n               <a href=\"/menu/edit/22/item/PROCESS/38\" target=\"_parent\"> <img alt=\"\" src=\"http://197.3.11.178/assets/client-style/images/voyage.png\"/> </a>\n</div>\n                <span>Souscription voyage</span>\n             </button>",
+         "content": "<br><button class=\"btnMenu\">               \n                <div id=\"btn_container\">\n               <a href=\"/menu/edit/22/item/PROCESS/38\" target=\"_parent\"> <img alt=\"\" src=\"https://i.imgur.com/hYMMdLI.png\"/> </a>\n</div>\n                <span>Souscription voyage</span>\n             </button>",
          "type": "htmlelement",
          "$$hashKey": "object:149",
          "tableView": false,
