@@ -3511,10 +3511,10 @@ window.addEventListener("load", function(){
 	var timeout = 0;
 	var waitFormInterval = this.setInterval(function(){
 		if(window.form){
-			window.form.on('render', function() {
+			/*window.form.on('render', function() {
 				//...
 				createSlider();
-			});
+			});*/
 			clearInterval();
 		}
 		if(timeout == 100){
