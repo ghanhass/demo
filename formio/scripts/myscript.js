@@ -3468,7 +3468,7 @@ function createSlider(){
     
         $('.owl-nav, .owl-dots').wrapAll("<div class='owl-controls'></div>");
         }
-    }
+    
 }
 if(document.readyState === "complete"){
     createSlider();
@@ -3635,5 +3635,4 @@ window.onload = function(){
     });
     
     builder.instance.ready.then(onReady);
-    createSlider();
 }
