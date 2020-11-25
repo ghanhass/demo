@@ -3470,7 +3470,29 @@ function createSlider(){
             $('.owl-nav, .owl-dots').wrapAll("<div class='owl-controls'></div>");
         }
         else{
-           console.log("slider not found !") ;
+            let domElement = formioElement;
+
+            // Options for the observer (which mutations to observe)
+            const config = { attributes: true, subtree: true };
+        
+            // Callback function to execute when mutations are observed
+            const callback = function(mutationsList, observer) {
+              {
+                for(let mutation of mutationsList) {
+                    console.log("mutation  = ", mutation);
+                    var customSliderElement = $('#formio .formio-component-custom_slider');
+                    console.log("carousel found !!");
+                    observer.disconnect();
+                    break;//no need to fetch through ther whole mutationList for better performances
+                }
+        
+            }
+        
+            // Create an observer instance linked to the callback function
+          const observer = new MutationObserver(callback);
+        
+          // Start observing the target node for configured mutations
+          observer.observe(domElement, config);
         }
     }
     
