@@ -1,13 +1,13 @@
 
 @font-face{
     font-family:'bnpp_sans_condensed';
-    src:url("https://bnpparibascardif.se/bpc-csf-ct-generic-theme/css/corporate-templates/fonts/bnpp_sans_condensed/BNPP%20Sans%20Cond%20v2.ttf") format("truetype");
+    src:url("./bnpp_sans_cond_v2.ttf") format("truetype");
     font-weight:normal;
     font-style:normal
 }
 @font-face{
     font-family:'bnpp_sans_condensed_bold';
-    src:url("https://bnpparibascardif.se/bpc-csf-ct-generic-theme/css/corporate-templates/fonts/bnpp_sans_condensed/BNPP%20Sans%20Cond%20Bold%20v2.ttf") format("truetype");
+    src:url("./bnpp_sans_cond_bold_v2.ttf") format("truetype");
     font-weight:normal;
     font-style:normal
 }
