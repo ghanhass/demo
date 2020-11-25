@@ -3473,23 +3473,25 @@ function createSlider(){
             let domElement = formioElement;
 
             // Options for the observer (which mutations to observe)
-            const config = { attributes: true, subtree: true };
+            var config = { attributes: true, subtree: true };
         
             // Callback function to execute when mutations are observed
-            const callback = function(mutationsList, observer) {
+            var callback = function(mutationsList, observer) {
               {
                 for(let mutation of mutationsList) {
                     console.log("mutation  = ", mutation);
                     var customSliderElement = $('#formio .formio-component-custom_slider');
-                    console.log("carousel found !!");
-                    observer.disconnect();
+                    if(customSliderElement.length){
+                        observer.disconnect();
+                        console.log("carousel found !!");
+                    }
                     break;//no need to fetch through ther whole mutationList for better performances
                 }
         
             }
         
             // Create an observer instance linked to the callback function
-          const observer = new MutationObserver(callback);
+          var observer = new MutationObserver(callback);
         
           // Start observing the target node for configured mutations
           observer.observe(domElement, config);
