@@ -188,3 +188,15 @@ color:#adadad;
         margin-bottom: 30px;
     }
 }
+
+
+.formio.builder .formio-component-custom_slider::before{
+    content: "HTML Element (le slider à suivre, copie le custom css class, le html code, et le HTML tag)";
+    color: #9c9c9c;
+    font-weight: 600;
+}
+
+.formio.builder .formio-component-custom_slider{
+    border: dotted 2px #9c9c9c;
+    box-shadow: 0 0 3px 2px #9c9c9c;
+}
