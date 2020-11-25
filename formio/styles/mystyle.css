@@ -1,3 +1,17 @@
+
+@font-face{
+    font-family:'bnpp_sans_condensed';
+    src:url("https://bnpparibascardif.se/bpc-csf-ct-generic-theme/css/corporate-templates/fonts/bnpp_sans_condensed/BNPP%20Sans%20Cond%20v2.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family:'bnpp_sans_condensed_bold';
+    src:url("https://bnpparibascardif.se/bpc-csf-ct-generic-theme/css/corporate-templates/fonts/bnpp_sans_condensed/BNPP%20Sans%20Cond%20Bold%20v2.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal
+}
+
 #form-select{
     display:block;
     margin:auto;
@@ -159,6 +173,61 @@ color:#adadad;
 
 #formio .banniereImage{
     display:none;
+}
+
+.formio-component-custom_slider .owl-carousel .item .wrapper {
+    height: 370px;
+    position: relative;
+    margin: auto;
+    max-width: 950px;
+}
+
+.formio-component-custom_slider .owl-carousel .item .wrapper .greenbox {
+    right: 0;
+    bottom: 0;
+    padding: 25px 30px;
+    background: #00965e;
+    position: absolute;
+    width: 325px;
+}
+
+.formio-component-custom_slider .owl-carousel .item .wrapper .greenbox h2 {
+    color: white;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: normal;
+    /* font-family: "bnpp_sans_condensed",Arial,Helvetica,sans-serif; */
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.formio-component-custom_slider .owl-carousel .item .wrapper .greenbox p {
+    color: white;
+    font-size: 13px;
+    /* font-family: Arial,Helvetica,sans-serif; */
+    margin: 0 0 20px 0;
+}
+
+.formio-component-custom_slider .owl-carousel .item .wrapper .greenbox a {
+    background: white;
+    color: #1d1d1b;
+    border-radius: 2px;
+    /* font-family: "bnpp_sans_condensed_bold",Arial,Helvetica,sans-serif; */
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 767px){
+    .formio-component-custom_slider .owl-carousel .item .wrapper .greenbox p {
+        width: 60%;
+        right: 10px;
+    }
+    .owl-carousel .carousel-item .wrapper .greenbox p {
+    display: none;
+}
 }
 
 @media screen and (min-width: 1200px){
