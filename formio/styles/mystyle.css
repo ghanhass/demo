@@ -196,7 +196,7 @@ color:#adadad;
     font-size: 32px;
     line-height: 32px;
     font-weight: normal;
-    /* font-family: "bnpp_sans_condensed",Arial,Helvetica,sans-serif; */
+    font-family: "bnpp_sans_condensed",Arial,Helvetica,sans-serif;
     text-transform: uppercase;
     margin: 0 0 10px 0;
 }
@@ -212,7 +212,7 @@ color:#adadad;
     background: white;
     color: #1d1d1b;
     border-radius: 2px;
-    /* font-family: "bnpp_sans_condensed_bold",Arial,Helvetica,sans-serif; */
+    font-family: "bnpp_sans_condensed_bold",Arial,Helvetica,sans-serif;
     text-transform: uppercase;
     display: inline-block;
     line-height: 40px;
