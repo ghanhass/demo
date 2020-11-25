@@ -3459,7 +3459,8 @@ function createSlider(){
     
     var formioElement = document.querySelector("#formio");
     if(formioElement){
-        var customSliderElement = $('#formio .formio-component-custom_slider');
+		var customSliderElement = $('#formio .formio-component-custom_slider');
+		console.log("customSliderElement = ", customSliderElement);
         if(customSliderElement.length){
             $('#formio .formio-component-custom_slider .owl-carousel').owlCarousel({
                 loop:true,
@@ -3473,53 +3474,22 @@ function createSlider(){
     
             $('.owl-nav, .owl-dots').wrapAll("<div class='owl-controls'></div>");
         }
-        else{
-            console.log("no customSliderElement found !");
-            let domElement = formioElement;
-
-            // Options for the observer (which mutations to observe)
-            var config = config = { subtree: true, childList: true};
-        
-            // Callback function to execute when mutations are observed
-            var callback = function(mutationsList, observer) {
-              
-                for(let mutation of mutationsList) {
-                    console.log("mutation  = ", mutation);
-                    var customSliderElement = $('#formio .formio-component-custom_slider');
-                    if(customSliderElement.length){
-                        observer.disconnect();
-                        console.log("carousel found !!");
-                    }
-                    break;//no need to fetch through ther whole mutationList for better performances
-                }
-        
-            
-            }
-            // Create an observer instance linked to the callback function
-          var observer = new MutationObserver(callback);
-        
-          // Start observing the target node for configured mutations
-          observer.observe(domElement, config);
-        }
     }
     
 }
 window.addEventListener("load", function(){    
 	owlPrepare();
-	createSlider();
 	console.log("window.form = ", window.form);
 	var timeout = 0;
 	var waitFormInterval = this.setInterval(function(){
 		if(window.form){
-			/*window.form.on('render', function() {
-				//...
-				createSlider();
-			});*/
-			clearInterval();
+			createSlider();
+			//console.log("timeout = ", timeout);
+			clearInterval(waitFormInterval);
 		}
-		if(timeout == 100){
-			clearInterval();
+		if(timeout == 500){
+			clearInterval(waitFormInterval);
 		}
-		timeout += 20;
-	},20);
+		timeout += 5;
+	},5);
 }) 

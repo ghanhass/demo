@@ -1,60 +1,60 @@
 var initialForm = {
-   "display": "form",
-   "components": [
-      {
-         "label": "HTML",
-         "tag": "div",
-         "attrs": [
-            {
-               "attr": "",
-               "value": ""
-            }
-         ],
-         "content": "<div class='items-container owl-carousel owl-theme'>\n  <div class='item' style='background-image: url(https://bnpparibascardif.se/documents/20808/44032/Board_Felt-tip+marker_Hand.jpg);'></div>\n  <div class='item' style='background-image: url(https://bnpparibascardif.se/documents/20808/44032/Meeting.jpg);'></div>\n  <div class='item' style='background-image: url(https://bnpparibascardif.se/documents/20808/44032/Mountain+landscape.jpg);'></div>\n</div>",
-         "refreshOnChange": false,
-         "customClass": "custom-slider",
-         "tableView": false,
-         "key": "custom_slider",
-         "type": "htmlelement",
-         "input": false
-      },
-      {
-         "label": "HTML",
-         "tag": "div",
-         "className": "banniereImage",
-         "attrs": [
-            {
-               "value": "",
-               "attr": ""
-            }
-         ],
-         "content": "<img style=\"width&#58;100%\" alt=\"\" src=\"https://i.imgur.com/Zdw0WJh.png\" />",
-         "refreshOnChange": false,
-         "hidden": true,
-         "tableView": false,
-         "key": "html",
-         "type": "htmlelement",
-         "input": false,
-         "$$hashKey": "object:149"
-      },
-      {
-         "key": "html2",
-         "input": false,
-         "tag": "div",
-         "attrs": [
-            {
-               "value": "text-align:center",
-               "attr": "style"
-            }
-         ],
-         "className": "menuList",
-         "content": "<br><button class=\"btnMenu\">               \n                <div id=\"btn_container\">\n               <a href=\"/menu/edit/22/item/PROCESS/38\" target=\"_parent\"> <img alt=\"\" src=\"https://i.imgur.com/hYMMdLI.png\"/> </a>\n</div>\n                <span>Souscription voyage</span>\n             </button>",
-         "type": "htmlelement",
-         "$$hashKey": "object:149",
-         "tableView": false,
-         "label": "HTML"
-      }
-   ]
+    "display": "form",
+    "components": [
+       {
+          "label": "HTML",
+          "tag": "div",
+          "attrs": [
+             {
+                "attr": "",
+                "value": ""
+             }
+          ],
+          "content": "<div class='items-container owl-carousel owl-theme'>\n  <div class='item' style='background-image: url(https://bnpparibascardif.se/documents/20808/44032/Board_Felt-tip+marker_Hand.jpg);'>\n    <div class=\"wrapper\"> <div class=\"greenbox\"> <h2>Med anledning av Coronaviruset</h2> <p>BNP Paribas Cardif följer utvecklingen av Covid-19 noggrant</p> <a href=\"#\">LÄS MER</a> </div> </div>\n  </div>\n  \n  <div class='item' style='background-image: url(https://bnpparibascardif.se/documents/20808/44032/Meeting.jpg);'>\n    <div class=\"wrapper\"> <div class=\"greenbox\"> <h2>Lokalt företag med globala rötter</h2> <p>BNP Paribas Cardif utgör försäkringsgrenen av den internationella bankkoncernen BNP Paribas, en av Europas ledande aktörer inom bank- och finanstjänster.</p> <a href=\"#\">Läs mer</a> </div> </div>\n  </div>\n  \n  <div class='item' style='background-image: url(https://bnpparibascardif.se/documents/20808/44032/Mountain+landscape.jpg);'>\n    <div class=\"wrapper\"> <div class=\"greenbox\"> <h2>BNP Paribas Cardif i Sverige</h2> <p>BNP Paribas Cardif Nordic AB etablerades i Sverige år 2000.</p> <a href=\"#\">LÄS mer</a> </div> </div>\n  </div>\n</div>",
+          "refreshOnChange": false,
+          "customClass": "custom-slider",
+          "tableView": false,
+          "key": "custom_slider",
+          "type": "htmlelement",
+          "input": false
+       },
+       {
+          "label": "HTML",
+          "tag": "div",
+          "className": "banniereImage",
+          "attrs": [
+             {
+                "value": "",
+                "attr": ""
+             }
+          ],
+          "content": "<img style=\"width&#58;100%\" alt=\"\" src=\"https://i.imgur.com/Zdw0WJh.png\" />",
+          "refreshOnChange": false,
+          "hidden": true,
+          "tableView": false,
+          "key": "html",
+          "type": "htmlelement",
+          "input": false,
+          "$$hashKey": "object:149"
+       },
+       {
+          "key": "html2",
+          "input": false,
+          "tag": "div",
+          "attrs": [
+             {
+                "value": "text-align:center",
+                "attr": "style"
+             }
+          ],
+          "className": "menuList",
+          "content": "<br><button class=\"btnMenu\">               \n                <div id=\"btn_container\">\n               <a href=\"/menu/edit/22/item/PROCESS/38\" target=\"_parent\"> <img alt=\"\" src=\"https://i.imgur.com/hYMMdLI.png\"/> </a>\n</div>\n                <span>Souscription voyage</span>\n             </button>",
+          "type": "htmlelement",
+          "$$hashKey": "object:149",
+          "tableView": false,
+          "label": "HTML"
+       }
+    ]
 };
 var form;
 var formioInfos;
